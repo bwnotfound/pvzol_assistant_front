@@ -51,7 +51,7 @@ export default function LoginPage() {
         }
       >
         <div className="text-sm">
-          警告：该服务器是由蓝白bw架设，由于服务器无法做到完全安全，请不要输入敏感信息（密码虽然在服务器是md5加密存储，但是也请不要用常用密码，避免泄漏）
+          警告：该网站是由蓝白bw架设，由于网站无法做到完全安全，请不要输入敏感信息（密码虽然在网站是md5加密存储，但是也请不要用常用密码，避免泄漏）
         </div>
         <div className={"mx-auto max-w-md"}>
           <div className={"divide-y divide-gray-300/50"}>
