@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: '蓝白bw的服务器',
-  description: '蓝白bw的服务器',
+  title: '蓝白bw的小工具分享',
+  description: '蓝白bw的小工具分享',
 }
 
 export default function RootLayout({

@@ -392,7 +392,7 @@ export function AccountMainPage(
     return <div></div>;
   }
   return (
-    <div className="absolute h-full w-full">
+    <div className="h-full w-full">
       {/* <div>accountMainPage</div> */}
       {AccountControlPanel(setIsAddAccountPageShow, reloadUser)}
       {AccountShowPanel(reloadUser, accountList, accountListDispatch)}

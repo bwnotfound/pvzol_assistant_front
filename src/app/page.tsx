@@ -65,17 +65,14 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className="flex w-full h-20 bg-gray-200 justify-center">
-        <div className="mt-6">
-          ICP备案号:&nbsp;&nbsp;
-          <a
-            className=" hover:text-blue-400"
-            href="https://beian.miit.gov.cn/"
-            target="_blank"
-          >
-            鄂ICP备2024036010号-1
-          </a>
-        </div>
+      <div className="flex w-full h-16 bg-gray-200 justify-center">
+        <a
+          className="mt-6 hover:text-blue-400"
+          href="https://beian.miit.gov.cn/"
+          target="_blank"
+        >
+          鄂ICP备2024036010号-1
+        </a>
       </div>
     </div>
   );

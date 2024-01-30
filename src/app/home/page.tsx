@@ -72,43 +72,51 @@ export default function UserPage() {
 
   useEffect(reloadUser, []);
 
-  function handleUsersidebarClicked(choice: string) {
-    setShowChoice(choice);
-    console.log(choice);
-  }
-
   return (
-    <div className={"h-full flex"}>
-      <div
-        className={
-          "w-2/12 h-full bg-gray-100 m-0 p-0 text-center leading-10 px-2 pt-20"
-        }
-      >
-        <div>
-          {/* <img src={usericon} alt="usericon" style={{ width: '10', height: '10'}}/> */}
-          <p className="text-lg">{userinfo.username}</p>
-          {/* <p>{userinfo.email}</p> */}
-          {/* <button onClick={()=>checkDelect()}>注销用户</button> */}
+    <div className={"h-full w-full"}>
+      <div className={"h-full w-full flex"}>
+        <div
+          className={
+            "w-2/12 h-full bg-gray-100 text-center leading-10 px-2 pt-20"
+          }
+        >
+          <div>
+            {/* <img src={usericon} alt="usericon" style={{ width: '10', height: '10'}}/> */}
+            <p className="text-lg">{userinfo.username}</p>
+            {/* <p>{userinfo.email}</p> */}
+            {/* <button onClick={()=>checkDelect()}>注销用户</button> */}
+          </div>
+          <div className="mt-14 text-xl w-full p-2">
+            {UserSidebar((choice) => {
+              setShowChoice(choice);
+            })}
+          </div>
         </div>
-        <div className="mt-14 text-xl w-full p-2">
-          {UserSidebar(handleUsersidebarClicked)}
+        <div className={"w-2/3 h-full"}>
+          {AccountMainPage(
+            showChoice,
+            accountList,
+            accountListDispatch,
+            reloadUser,
+            setIsAddAccountPageShow
+          )}
+          {DisplayPage(accountList, showChoice)}
         </div>
-      </div>
-      <div className={"w-2/3 h-full relative"}>
-        {AccountMainPage(
-          showChoice,
-          accountList,
-          accountListDispatch,
-          reloadUser,
-          setIsAddAccountPageShow
+        {AccountAddPanel(
+          isAddAccountPageShow,
+          setIsAddAccountPageShow,
+          handleAddAccountClicked(accountListDispatch, setIsAddAccountPageShow)
         )}
-        {DisplayPage(showChoice)}
       </div>
-      {AccountAddPanel(
-        isAddAccountPageShow,
-        setIsAddAccountPageShow,
-        handleAddAccountClicked(accountListDispatch, setIsAddAccountPageShow)
-      )}
+      <div className="flex w-full h-16 bg-gray-200 justify-center">
+        <a
+          className="mt-6 hover:text-blue-400"
+          href="https://beian.miit.gov.cn/"
+          target="_blank"
+        >
+          鄂ICP备2024036010号-1
+        </a>
+      </div>
     </div>
   );
 }
