@@ -15,7 +15,7 @@ export function AccountAddPanel(
   const [selectFile, setSelectFile] = useState<File | null>(null);
   const [isRequesting, setIsRequesting] = useState(false);
 
-  if (!isAddAccountPageShow) return <div></div>;
+  if (!isAddAccountPageShow) return null;
   return (
     <div className="fixed bg-gray-300 bg-opacity-60 h-full w-full">
       <div className="absolute h-3/4 w-2/3 rounded-lg mt-20 ml-28 bg-gray-50">
@@ -389,7 +389,7 @@ export function AccountMainPage(
   setIsAddAccountPageShow: any
 ) {
   if (showChoice !== "accountManage") {
-    return <div></div>;
+    return null;
   }
   return (
     <div className="h-full w-full">

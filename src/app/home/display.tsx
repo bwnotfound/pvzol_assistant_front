@@ -93,7 +93,7 @@ function refresh(setIsRunning: any, setRunList: any, setWaitList: any) {
 }
 
 function ShowLogContent(showingLog: any, setShowingLog: any) {
-  if (showingLog == null) return <div></div>;
+  if (showingLog == null) return null;
   return (
     <div className="fixed top-0 left-0 bg-gray-300 bg-opacity-60 h-full w-full justify-center">
       <div className="mx-auto mt-10 w-4/5 h-5/6 rounded-lg bg-gray-50">
@@ -140,7 +140,7 @@ function AccountLogsPage(
   showingAccountId: any,
   setShowingAccountId: any
 ) {
-  if (showingAccountId == -1) return <div></div>;
+  if (showingAccountId == -1) return null;
   return (
     <div>
       <div className="fixed top-0 left-0 bg-gray-300 bg-opacity-60 h-full w-full justify-center">
@@ -229,7 +229,7 @@ export function DisplayPage(accountList: any, showChoice: any) {
   // }, []);
   console.log("in DisplayPage");
   if (showChoice !== "displayPage") {
-    return <div></div>;
+    return null;
   }
   return (
     <div className="mt-20 ml-20">

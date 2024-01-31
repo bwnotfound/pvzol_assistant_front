@@ -63,6 +63,15 @@ export default function Home() {
           >
             注册
           </button>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-7"
+            type="button"
+            onClick={() => {
+              window.location.href = "/home";
+            }}
+          >
+            进入主页
+          </button>
         </div>
       </div>
       <div className="flex w-full h-16 bg-gray-200 justify-center">
