@@ -234,14 +234,15 @@ export function DisplayPage(accountList: any, showChoice: any) {
   return (
     <div className="mt-20 ml-20">
       <button
-        className="bg-green-300 rounded-lg px-3 py-1"
+        className="bg-green-300 rounded-lg px-3 py-1 mb-2 hover:bg-green-400"
         type="button"
         onClick={() => refresh(setIsRunning, setRunList, setWaitList)}
       >
         刷新
       </button>
+      <div className="mb-7">每天9点15点各运行一次，周五9点额外把剩下跨服次数用掉</div>
 
-      <div>{RunningListShow(isRunning, runList, waitList)}</div>
+      {/* <div>{RunningListShow(isRunning, runList, waitList)}</div> */}
       {AccountTable(accountList, setShowingAccountId)}
       {AccountLogsPage(
         logs,
