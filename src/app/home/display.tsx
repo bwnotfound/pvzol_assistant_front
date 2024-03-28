@@ -240,7 +240,7 @@ export function DisplayPage(accountList: any, showChoice: any) {
       >
         刷新
       </button>
-      <div className="mb-7">当前助手版本: pre26_4 (旧版本不能保证兼容性)</div>
+      <div className="mb-7">当前助手版本: pre27_1 (旧版本不能保证兼容性)</div>
       <div className="mb-7">每天9点15点各运行一次。9点运行时会禁用刷洞和打副本，15点运行时才会开始刷洞和打副本。</div>
       <div className="mb-7">周五9点会自动把剩下跨服次数全部用掉</div>
 
