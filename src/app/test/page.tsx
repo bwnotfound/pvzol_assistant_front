@@ -472,7 +472,7 @@ function CircleRunningStatusShow(isRunning: any, runningAccountList: any) {
         <ul>
           {runningAccountList.map((account: any) => (
             <li key={account.id}>
-              id:{account.id}&nbsp;&nbsp; nickname:{account.nickname}
+              id:{account.id}&nbsp;&nbsp; userId:{account.userId}&nbsp;&nbsp; nickname:{account.nickname}
               &nbsp;&nbsp; description:{account.description}&nbsp;&nbsp;
               gameName:{account.gameName}&nbsp;&nbsp; enabled:
               {account.enabled ? "启用" : "禁用"}
