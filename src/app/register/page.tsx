@@ -57,7 +57,7 @@ export default function RegisterPage() {
     >
       <div
         className={
-          "relative bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10"
+          "relative bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10 animate-fade-in"
         }
       >
         <div className={"mx-auto max-w-md"}>
@@ -72,29 +72,33 @@ export default function RegisterPage() {
                 value={username}
                 onChange={(event) => setName(event.target.value)}
                 placeholder="用户名"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all duration-300"
               />
               <input
                 type="text"
                 value={email}
                 onChange={(event) => setEmail(event.target.value)}
                 placeholder="邮箱"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all duration-300"
               />
               <input
                 type="password"
                 value={password}
                 onChange={(event) => setPassword(event.target.value)}
                 placeholder="密码"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all duration-300"
               />
               <input
                 type="password"
                 value={anotherPassword}
                 onChange={(event) => setAnotherPassword(event.target.value)}
                 placeholder="再次输入密码"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all duration-300"
               />
               <br />
               <button
                 className={
-                  " bg-green-600 text-white w-44 p-2 rounded-md hover:bg-green-700"
+                  "btn btn-bg border w-44 p-2 rounded-md"
                 }
                 type="submit"
                 onClick={() =>
@@ -105,7 +109,7 @@ export default function RegisterPage() {
               </button>
               <br />
               <button
-                className={" text-purple-600 w-44 p-2 rounded-md"}
+                className={"btn btn-bd border w-44 p-2 rounded-md"}
                 type="submit"
                 onClick={() => (window.location.href = "/login")}
               >
