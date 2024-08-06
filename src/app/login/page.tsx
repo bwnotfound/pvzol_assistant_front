@@ -40,43 +40,31 @@ export default function LoginPage() {
   }
 
   return (
-    <div
-      className={
-        "relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12"
-      }
-    >
-      <div
-        className={
-          "relative bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10"
-        }
-      >
-        <div className="text-sm">
+    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+      <div className="relative bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10 animate-fade-in">
+        <div className="text-sm text-gray-700 mb-6">
           警告：该网站是由蓝白bw架设，由于网站无法做到完全安全，请不要输入敏感信息（密码虽然在网站是md5加密存储，但是也请不要用常用密码，避免泄漏）
         </div>
-        <div className={"mx-auto max-w-md"}>
-          <div className={"divide-y divide-gray-300/50"}>
-            <div
-              className={
-                "relative text-center space-y-6 py-1 text-pretty leading-7 text-gray-700"
-              }
-            >
+        <div className="mx-auto max-w-md">
+          <div className="divide-y divide-gray-300/50">
+            <div className="relative text-center space-y-6 py-1 leading-7 text-gray-700">
               <input
                 type="text"
                 value={email}
                 onChange={handleEmailChange}
                 placeholder="邮箱"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all duration-300"
               />
               <input
                 type="password"
                 value={password}
                 onChange={handlePasswordChange}
                 placeholder="密码"
+                className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 transition-all duration-300"
               />
               <br />
               <button
-                className={
-                  " bg-green-600 text-white w-44 p-2 rounded-md hover:bg-green-700"
-                }
+                className="btn btn-bg text-white w-44 p-2 rounded-md transition-colors"
                 type="submit"
                 onClick={() => check(email, password)}
               >
@@ -84,11 +72,11 @@ export default function LoginPage() {
               </button>
               <br />
               <button
-                className={" text-purple-600 w-44 p-2 rounded-md"}
-                type="submit"
+                className="btn btn-bd border w-44 p-2 rounded-md"
+                type="button"
                 onClick={() => (window.location.href = "/register")}
               >
-                注册
+                前往注册
               </button>
             </div>
           </div>

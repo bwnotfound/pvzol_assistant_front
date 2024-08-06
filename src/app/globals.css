@@ -6,7 +6,88 @@ html {
     height: 100%;
     width: 100%;
 }
+
 body {
     height: 100%;
     width: 100%;
 }
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1s ease-in-out;
+  }
+
+  .animate-slide-in {
+    animation: slide-in 1s ease-in-out;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 1s ease-in-out;
+  }
+  .btn {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .btn-bg {
+    background-color: #3b82f6; /* blue-500 */
+    border-color: #3b82f6;
+    color: white;
+  }
+
+  .btn-bg:hover {
+    background-color: #1e40af; /* blue-700 */
+    border-color: #1e40af;
+  }
+
+  .btn-bd {
+    background-color: white;
+    border-color: #3b82f6; /* blue-500 */
+    color: #3b82f6;
+  }
+
+  .btn-bd:hover {
+    background-color: #bfdbfe; /* blue-100 */
+    border-color: #bfdbfe;
+  }
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-in-out;
+  }
+  input {
+    transition: all 0.3s ease;
+  }
+
+  input:focus {
+    border-color: #3b82f6; /* blue-500 */
+    
+    /*box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);*/ /* blue-500 with opacity */
+  }
